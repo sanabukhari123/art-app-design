@@ -1,0 +1,33 @@
+.sideBarMain {
+  height: 100vh;
+}
+.sideBarMain
+{
+  background: #101010;
+}
+.sideBarMain .ant-menu-item, .sideBarMain .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal),.sideBarMain .ant-menu-item-selected
+{
+  background: #101010!important;
+}
+.collection-title
+{
+  color: #D9D9D9;
+  /* font-family: "New York Large"; */
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 29px;
+   padding:20px;
+}
+.sideBarMain .ant-menu-item span
+{
+  color: rgba(255,255,255,0.85);
+  /* font-family: Lato; */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+.sideBarMain .ant-menu-item span.anticon
+{
+font-size: 20px;
+}

@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Lato', sans-serif;
+}
+.ant-btn
+{
+  border-color: #E5E5E5;
+}
+.ant-modal-body p{
+  color: #000000;
+  font-family: Lato;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 29px;
+  text-align: center;
+}
+.ant-radio-checked .ant-radio-inner {
+  border-color: #658BD3!important;
+}
+.ant-radio-inner::after
+{
+  background-color: #658BD3!important;
+}
+
+.ant-radio-wrapper
+{
+  color: #595959!important;
+}

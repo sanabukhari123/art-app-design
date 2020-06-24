@@ -1,0 +1,39 @@
+@import '~antd/dist/antd.css';
+
+.card-outer .ant-card-cover, .card-outer .ant-card-body
+{
+  display: inline-block;
+}
+.table-collection .ant-card-cover
+{
+    width: 120px;
+    height: 120px;
+    vertical-align: top;
+}
+.table-collection .ant-card-cover img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.table-collection .ant-table-cell
+{
+    padding: 16px 30px 16px 40px;
+}
+.table-collection .ant-card-body
+{
+    padding: 0 20px;
+}
+.table-collection .ant-card-body p,.table-collection .ant-table-cell p
+{
+margin-bottom: 0!important;
+}
+.table-collection .ant-table-cell .margin-bottom10
+{
+margin-bottom: 7px;
+}
+.table-collection .ant-table-tbody .ant-table-cell {
+    padding: 2px 30px 2px 40px;
+}
+.table-collection .ant-table-tbody .ant-table-cell .ant-card-bordered
+{
+    border: none;
+}

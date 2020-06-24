@@ -1,0 +1,10 @@
+@import '~antd/dist/antd.css';
+
+.filter-section .filter-row span
+{
+    color: rgba(0,0,0,0.65);
+    /* font-family: Lato; */
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
+}
