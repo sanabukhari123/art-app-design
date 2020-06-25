@@ -34,6 +34,7 @@ const SideBar = ({ collapsed, onCollapseChange }) => {
         Collection
 
         </Menu.Item>
+{/*         
         <Menu.Item key="3" icon={<UploadOutlined />}>
         Locations
         </Menu.Item>
@@ -48,7 +49,7 @@ const SideBar = ({ collapsed, onCollapseChange }) => {
         </Menu.Item>
         <Menu.Item key="7" icon={<UploadOutlined />}>
         Settings
-        </Menu.Item>
+        </Menu.Item> */}
       </Menu>
       
     </Sider>

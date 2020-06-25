@@ -53,7 +53,7 @@ const App = () => {
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }}>
           <Row>
-            <Col sm={4} md={2} lg={8} xl={1}>
+            <Col sm={4} md={2} lg={8} xl={1} xxl={1}>
               {collapsed ? (
                 <MenuUnfoldOutlined className="trigger" onClick={toggle} />
               ) : (
@@ -61,19 +61,19 @@ const App = () => {
               )}
             </Col>
 
-            <Col sm={4} md={2} lg={8} xl={10}>
+            <Col sm={4} md={2} lg={8} xl={10} xxl={10}>
               <span className="collection-span">Collection</span>
             </Col>
 
-            <Col className="header-search" sm={2} md={2} lg={8} xl={8}>
+            <Col className="header-search align-right" sm={2} md={2} lg={8} xl={8} xxl={9}>
               <Search
                 placeholder="Search by name, ID, artist, description "
                 onSearch={(value) => console.log(value)}
                 style={{ width: 380 }}
               />
             </Col>
-            <Col style={{ padding: "0 20px" }} sm={2} md={2} lg={4} xl={5}>
-              <row>
+            <Col style={{ padding: "0 20px" }} sm={2} md={2} lg={4} xl={5} xxl={4}>
+              <Row>
                 <Dropdown overlay={menu} trigger={["click"]}>
                   <a
                     className="ant-dropdown-link"
@@ -112,7 +112,7 @@ const App = () => {
                     />
                   </a>
                 </Dropdown>
-              </row>
+              </Row>
             </Col>
           </Row>
         </Header>
