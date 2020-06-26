@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col } from "antd";
+import { Row, Col,InputNumber } from "antd";
 import {
   Form,
   Input,
@@ -205,21 +205,21 @@ const FormA = () => {
                 name={["dimensions", "height"]}
                 rules={[{ required: true }]}
               >
-                <Input />
+                <InputNumber />
               </Form.Item>
               <Form.Item
                 label="Width (cm):"
                 name={["dimensions", "width"]}
                 rules={[{ required: true }]}
               >
-                <Input />
+                <InputNumber />
               </Form.Item>
               <Form.Item
                 label="Depth (cm):"
                 name={["dimensions", "depth"]}
                 rules={[{ required: true }]}
               >
-                <Input />
+                <InputNumber />
               </Form.Item>
             </Input.Group>
           </Form.Item>
