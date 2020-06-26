@@ -204,31 +204,22 @@ const FormA = () => {
                 label="Height (cm):"
                 name={["dimensions", "height"]}
                 rules={[{ required: true }]}
-                style={{ display: "inline-block", width: "calc(25% - 8px)" }}
               >
-                <Input placeholder="Height (cm)" />
+                <Input />
               </Form.Item>
               <Form.Item
                 label="Width (cm):"
                 name={["dimensions", "width"]}
                 rules={[{ required: true }]}
-                style={{
-                  display: "inline-block",
-                  width: "calc(25% - 8px)",
-                }}
               >
-                <Input placeholder="Width (cm)" />
+                <Input />
               </Form.Item>
               <Form.Item
                 label="Depth (cm):"
                 name={["dimensions", "depth"]}
                 rules={[{ required: true }]}
-                style={{
-                  display: "inline-block",
-                  width: "calc(25% - 8px)",
-                }}
               >
-                <Input placeholder="Depth (cm)" />
+                <Input />
               </Form.Item>
             </Input.Group>
           </Form.Item>
