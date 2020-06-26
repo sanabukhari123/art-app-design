@@ -5,7 +5,7 @@ import FormA from "./formA/FormA";
 import FormB from "./formB/FormB";
 
 const AddArtwork = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },

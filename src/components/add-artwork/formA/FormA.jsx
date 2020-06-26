@@ -17,6 +17,11 @@ import { UploadOutlined } from "@ant-design/icons";
 const { Option } = Select;
 
 const FormA = () => {
+  const DEFAULT_DATE_FORMATE = "dayMonthYear";
+  const DEFAULT_DATE_TYPE = "exactDate";
+  const [dateFormate, setDateFormate] = useState(DEFAULT_DATE_FORMATE);
+  const [dateType, setDateType] = useState(DEFAULT_DATE_TYPE);
+
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
@@ -46,24 +51,7 @@ const FormA = () => {
     },
   };
 
-  const [size, setSize] = useState("small");
-  const [radio, setRadio] = useState(1);
-  const { TabPane } = Tabs;
-
-  const onChange = (e) => {
-    setSize(e.target.value);
-  };
-
-  const onRadioChange = (e) => {
-    console.log("radio checked", e.target.value);
-    setRadio(e.target.value);
-  };
-  const formItemLayout = {
-    labelCol: { span: 6 },
-    wrapperCol: { span: 14 },
-  };
-
-  const radioStyle = {
+  const dateTypeRadioBtnStyle = {
     display: "block",
     height: "30px",
     lineHeight: "30px",
@@ -93,42 +81,51 @@ const FormA = () => {
         <div className="inner-form">
           <Form.Item
             className="small-width"
-            label="Artwork Title* "
-            name="Artwork Title"
-            rules={[{ required: true, message: "Please input your username!" }]}
+            label="Artwork Title"
+            name="artworkTitle"
+            rules={[{ required: true, message: "This is required" }]}
           >
             <Input placeholder="The Battle of San Romano" />
           </Form.Item>
-
           <Form.Item
             className="small-width"
-            name="Artist "
-            label="Artist "
-            hasFeedback
-            rules={[{ required: true, message: "Please select your country!" }]}
+            name="artist"
+            label="Artist"
+            rules={[{ required: true, message: "Please select Artist" }]}
           >
-            <Select placeholder="Select Contact">
+            <Select placeholder="Select Category">
               <Option value="china">China</Option>
               <Option value="usa">U.S.A</Option>
             </Select>
           </Form.Item>
-          <Form.Item
-            className="id-name small-width"
-            label="ID*"
-            name="ID*"
-            valuePropName="checked"
-            rules={[{ required: true, message: "Please input your username!" }]}
-          >
-            <Checkbox>Auto-assign ID</Checkbox>
-            <div>
-              <Input />
-            </div>
+          <Form.Item className="id-name small-width" label="ID*">
+            <Input.Group>
+              <Form.Item
+                name={["authoAssignId", "autoAssigned"]}
+                noStyle
+                valuePropName="checked"
+              >
+                <Checkbox> Auto-assign ID </Checkbox>
+              </Form.Item>
+              <br />
+              <Form.Item
+                name={["authoAssignId", "autoAssignedDetails"]}
+                noStyle
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your nickname",
+                  },
+                ]}
+              >
+                <Input />
+              </Form.Item>
+            </Input.Group>
           </Form.Item>
           <Form.Item
             className="small-width"
-            name="Category"
-            label="Category "
-            hasFeedback
+            name="category"
+            label="Category"
             rules={[{ required: true, message: "Please select your country!" }]}
           >
             <Select placeholder="Select Category">
@@ -138,9 +135,8 @@ const FormA = () => {
           </Form.Item>
           <Form.Item
             className="small-width"
-            name="Medium  "
+            name="medium"
             label="Medium"
-            hasFeedback
             rules={[{ required: true, message: "Please select your country!" }]}
           >
             <Select placeholder="Select Medium">
@@ -150,54 +146,35 @@ const FormA = () => {
           </Form.Item>
           <Form.Item
             className="small-width"
-            label="Tags "
-            name="Tags"
+            label="Tags"
+            name="tags"
             rules={[{ required: true, message: "Please input your username!" }]}
           >
             <Input placeholder="Start typing tag name" />
           </Form.Item>
-          <Form.Item>
+          <Form.Item name="dateType">
             <div className="button-tab">
               <Radio.Group
-                value={size}
-                onChange={onChange}
+                value={dateFormate}
+                onChange={(e) => setDateFormate(e.target.value)}
                 style={{ marginBottom: 16 }}
               >
-                <Radio.Button value="small">DD/MM/YYYY</Radio.Button>
-                <Radio.Button value="default">MM/YYYY</Radio.Button>
-                <Radio.Button value="large">YYYY</Radio.Button>
-                <Radio.Button value="large">C</Radio.Button>
+                <Radio.Button value="dayMonthYear">DD/MM/YYYY</Radio.Button>
+                <Radio.Button value="monthYear">MM/YYYY</Radio.Button>
+                <Radio.Button value="year">YYYY</Radio.Button>
+                <Radio.Button value="centruy">C</Radio.Button>
                 <Checkbox className="circa">Circa</Checkbox>
               </Radio.Group>
-              {/* <Tabs defaultActiveKey="1" size={size} style={{ marginBottom: 32 }}>
-              <TabPane tab="Tab 1" key="1">
-                Content of tab 1
-              </TabPane>
-              <TabPane tab="Tab 2" key="2">
-                Content of tab 2
-              </TabPane>
-              <TabPane tab="Tab 3" key="3">
-                Content of tab 3
-              </TabPane>
-            </Tabs> */}
-              {/* <Tabs defaultActiveKey="1" type="card" size={size}>
-              <TabPane tab="Card Tab 1" key="1">
-                Content of card tab 1
-              </TabPane>
-              <TabPane tab="Card Tab 2" key="2">
-                Content of card tab 2
-              </TabPane>
-              <TabPane tab="Card Tab 3" key="3">
-                Content of card tab 3
-              </TabPane>
-            </Tabs> */}
 
               <div>
-                <Radio.Group onChange={onRadioChange} value={radio}>
-                  <Radio style={radioStyle} value={1}>
+                <Radio.Group
+                  onChange={(e) => setDateType(e.target.value)}
+                  value={dateType}
+                >
+                  <Radio style={dateTypeRadioBtnStyle} value="exactDate">
                     Exact Date
                   </Radio>
-                  <Radio style={radioStyle} value={2}>
+                  <Radio style={dateTypeRadioBtnStyle} value="dateRange">
                     Date Range
                   </Radio>
                 </Radio.Group>
@@ -220,23 +197,40 @@ const FormA = () => {
           <Form.Item
             className="dimension-class"
             label="Dimensions"
-            name="Dimensions "
-            rules={[{ required: true, message: "Please input your username!" }]}
+            name="dimensions"
           >
-            <Row>
-              <Row>
-                <label>Height (cm):</label>
-                <input></input>
-              </Row>
-              <Row>
-                <label>Width (cm):</label>
-                <input></input>
-              </Row>
-              <Row>
-                <label>Depth (cm):</label>
-                <input></input>
-              </Row>
-            </Row>
+            <Input.Group>
+              <Form.Item
+                label="Height (cm):"
+                name={["dimensions", "height"]}
+                rules={[{ required: true }]}
+                style={{ display: "inline-block", width: "calc(25% - 8px)" }}
+              >
+                <Input placeholder="Height (cm)" />
+              </Form.Item>
+              <Form.Item
+                label="Width (cm):"
+                name={["dimensions", "width"]}
+                rules={[{ required: true }]}
+                style={{
+                  display: "inline-block",
+                  width: "calc(25% - 8px)",
+                }}
+              >
+                <Input placeholder="Width (cm)" />
+              </Form.Item>
+              <Form.Item
+                label="Depth (cm):"
+                name={["dimensions", "depth"]}
+                rules={[{ required: true }]}
+                style={{
+                  display: "inline-block",
+                  width: "calc(25% - 8px)",
+                }}
+              >
+                <Input placeholder="Depth (cm)" />
+              </Form.Item>
+            </Input.Group>
           </Form.Item>
         </div>
         <Form.Item
