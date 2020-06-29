@@ -24,6 +24,11 @@
   src: local("Lato"), url(./Font/Lato/Lato-Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "New York Large Regular";
+  src: local("New York Large Regular"),
+    url(./Font/New-York/new-york-large_regular.ttf) format("truetype");
+}
 /******************LATO Font END******************/
 
 body {
@@ -109,7 +114,7 @@ code {
   color: #595959 !important;
 }
 
-.ant-checkbox-checked .ant-checkbox-inner,
+/* .ant-checkbox-checked .ant-checkbox-inner,
 .ant-radio-inner::after {
   background-color: #315497 !important;
 }
@@ -121,7 +126,7 @@ code {
 .ant-radio:hover .ant-radio-inner,
 .ant-radio-input:focus + .ant-radio-inner {
   border-color: #315497 !important;
-}
+} */
 
 .dimension-class .ant-form-item-label label {
   color: rgba(0, 0, 0, 0.85);

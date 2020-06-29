@@ -53,7 +53,7 @@ const App = () => {
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }}>
           <Row>
-            <Col sm={4} md={2} lg={8} xl={1} xxl={1}>
+            <Col sm={4} md={2} lg={2} xl={1} xxl={1}>
               {collapsed ? (
                 <MenuUnfoldOutlined className="trigger" onClick={toggle} />
               ) : (
@@ -72,7 +72,7 @@ const App = () => {
                 style={{ width: 380 }}
               />
             </Col>
-            <Col style={{ padding: "0 20px" }} sm={2} md={2} lg={4} xl={5} xxl={4}>
+            <Col style={{ padding: "0 20px" }} sm={2} md={2} lg={6} xl={5} xxl={4}>
               <Row>
                 <Dropdown overlay={menu} trigger={["click"]}>
                   <a

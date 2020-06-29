@@ -1,6 +1,6 @@
 .padding-sides {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .grey-row {
@@ -28,7 +28,7 @@
   border-radius: 6px;
   background-color: #315497;
   color: #ffffff;
-  padding: 5px 18px;
+  padding: 5px 23px;
 }
 .grey-row button {
   color: #595959;
@@ -37,7 +37,7 @@
   letter-spacing: 0;
   line-height: 22px;
   text-align: center;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 /* ///////////////////////// FORMA start////////////////// */
 .inner-form {
@@ -59,6 +59,7 @@
 .button-tab {
   margin-left: 267px;
   width: 100%;
+  padding-top: 15px;
 }
 
 .select-outer {
@@ -117,7 +118,7 @@
 
 .small-width .ant-input,
 .small-width .ant-select {
-  width: 349px;
+  width: 349px!important;
 }
 
 .id-name label {
@@ -265,5 +266,59 @@ width:64px!important;
   margin-left: 0;
   margin-right: 20px;
 }
+.id-name label
+{
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 17px;
+}
+.id-name label span
+{
+font-weight: normal;
+color: rgba(0,0,0,0.65);
+font-size: 14px;
+letter-spacing: 0;
+line-height: 22px;
+}
+.format-acceptance .ant-upload-select
+{
+    padding-bottom: 5px;
+}
+.padding-top30
+{
+padding-top: 30px;
+}
+.button-tab .select-outer .ant-select
+{
+width: 100%;
+}
+.button-tab .select-outer 
+{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.tag-select .ant-select-selection-item
+{
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+}
+.tag-select .ant-select-selection-item-content
+{
+    color: rgba(0,0,0,0.65);
+  font-size: 12px;
+  line-height: 20px;
+}
+.tag-select .ant-select-selector
+{
+    padding: 1px 15px;
+}
+.format-acceptance
+{
+padding-top: 20px;
+}
+
 
 /* ///////////////////////// FORMB end////////////////// */

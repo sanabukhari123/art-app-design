@@ -7,34 +7,31 @@ import {
   AppstoreOutlined,
 } from "@ant-design/icons";
 
-import './SideBar.css';
+import "./SideBar.css";
 
 const { Sider } = Layout;
 const SideBar = ({ collapsed, onCollapseChange }) => {
   return (
     <Sider
-      className='sideBarMain'
+      className="sideBarMain"
       trigger={null}
       collapsible
       collapsed={collapsed}
       breakpoint="lg"
       onBreakpoint={onCollapseChange}
+      width={256}
     >
-      <div >
-        
+      <div>
         <h3 className="collection-title">Global Collection</h3>
-        </div>
+      </div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-        <Menu.Item key="1" icon={<AppstoreOutlined  />}>
-        Dashboard
-
-
+        <Menu.Item key="1" icon={<AppstoreOutlined />}>
+          Dashboard
         </Menu.Item>
         <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-        Collection
-
+          Collection
         </Menu.Item>
-{/*         
+        {/*         
         <Menu.Item key="3" icon={<UploadOutlined />}>
         Locations
         </Menu.Item>
@@ -51,7 +48,6 @@ const SideBar = ({ collapsed, onCollapseChange }) => {
         Settings
         </Menu.Item> */}
       </Menu>
-      
     </Sider>
   );
 };

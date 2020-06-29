@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Row, Col,InputNumber } from "antd";
+import moment from "moment";
+import { Row, Col, InputNumber, DatePicker } from "antd";
 import {
   Form,
   Input,
@@ -14,9 +15,29 @@ import {
 } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 
+
+
+const { RangePicker } = DatePicker;
+const dateFormat = "YYYY/MM/DD";
+const monthFormat = "YYYY/MM";
+
+const dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
+
 const { Option } = Select;
 
 const FormA = () => {
+
+  const { Option } = Select;
+
+  const children = [];
+  for (let i = 10; i < 36; i++) {
+    children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
+  }
+  
+  function handleChange(value) {
+    console.log(`selected ${value}`);
+  }
+
   const DEFAULT_DATE_FORMATE = "dayMonthYear";
   const DEFAULT_DATE_TYPE = "exactDate";
   const [dateFormate, setDateFormate] = useState(DEFAULT_DATE_FORMATE);
@@ -145,54 +166,79 @@ const FormA = () => {
             </Select>
           </Form.Item>
           <Form.Item
-            className="small-width"
+            className="small-width tag-select"
             label="Tags"
             name="tags"
             rules={[{ required: true, message: "Please input your username!" }]}
           >
-            <Input placeholder="Start typing tag name" />
+            <Select
+    mode="multiple"
+    style={{ width: '100%' }}
+    placeholder="Please select"
+    defaultValue={['Italy', 'Middle Ages']}
+    onChange={handleChange}
+  >
+    {children}
+  </Select>
           </Form.Item>
           <Form.Item name="dateType">
-            <div className="button-tab">
-              <Radio.Group
-                value={dateFormate}
-                onChange={(e) => setDateFormate(e.target.value)}
-                style={{ marginBottom: 16 }}
-              >
-                <Radio.Button value="dayMonthYear">DD/MM/YYYY</Radio.Button>
-                <Radio.Button value="monthYear">MM/YYYY</Radio.Button>
-                <Radio.Button value="year">YYYY</Radio.Button>
-                <Radio.Button value="centruy">C</Radio.Button>
-                <Checkbox className="circa">Circa</Checkbox>
-              </Radio.Group>
-
-              <div>
+            <Input.Group>
+              <div className="button-tab">
                 <Radio.Group
-                  onChange={(e) => setDateType(e.target.value)}
-                  value={dateType}
+                  value={dateFormate}
+                  onChange={(e) => setDateFormate(e.target.value)}
+                  style={{ marginBottom: 16 }}
                 >
-                  <Radio style={dateTypeRadioBtnStyle} value="exactDate">
-                    Exact Date
-                  </Radio>
-                  <Radio style={dateTypeRadioBtnStyle} value="dateRange">
-                    Date Range
-                  </Radio>
+                  <Radio.Button value="dayMonthYear">DD/MM/YYYY</Radio.Button>
+                  <Radio.Button value="monthYear">MM/YYYY</Radio.Button>
+                  <Radio.Button value="year">YYYY</Radio.Button>
+                  <Radio.Button value="centruy">C</Radio.Button>
+                  <Checkbox className="circa">Circa</Checkbox>
                 </Radio.Group>
-              </div>
 
-              <div className="select-outer">
-                <Select placeholder="XIII">
-                  <Option value="china">China</Option>
-                  <Option value="usa">U.S.A</Option>
-                </Select>
+                <div>
+                  <Radio.Group
+                    onChange={(e) => setDateType(e.target.value)}
+                    value={dateType}
+                  >
+                    <Radio style={dateTypeRadioBtnStyle} value="exactDate">
+                      Exact Date
+                    </Radio>
+                    <Radio style={dateTypeRadioBtnStyle} value="dateRange">
+                      Date Range
+                    </Radio>
+                  </Radio.Group>
+                </div>
+
+                <div>
+                  {/* <RangePicker
+                    defaultValue={[
+                      moment("2015/01/01", dateFormat),
+                      moment("2015/01/01", dateFormat),
+                    ]}
+                    format={dateFormat}
+                  /> */}
+                </div>
+                <div>
+                  <div className="select-outer">
+                    <Form.Item noStyle>
+                      <Select placeholder="XIII">
+                        <Option value="china">China</Option>
+                        <Option value="usa">U.S.A</Option>
+                      </Select>
+                    </Form.Item>
+                  </div>
+                  <div className="select-outer">
+                    <Form.Item noStyle>
+                      <Select placeholder="XIV">
+                        <Option value="china">China</Option>
+                        <Option value="usa">U.S.A</Option>
+                      </Select>
+                    </Form.Item>
+                  </div>
+                </div>
               </div>
-              <div className="select-outer">
-                <Select placeholder="XIV">
-                  <Option value="china">China</Option>
-                  <Option value="usa">U.S.A</Option>
-                </Select>
-              </div>
-            </div>
+            </Input.Group>
           </Form.Item>
           <Form.Item
             className="dimension-class"
@@ -226,9 +272,7 @@ const FormA = () => {
         </div>
         <Form.Item
           className="small-width"
-          label="Annotation to Dimensions 
-
-            "
+          label="Annotation to Dimensions"
           name="Annotation to Dimensions 
 
             "
@@ -340,6 +384,7 @@ const FormA = () => {
           </Select>
         </Form.Item>
         <Form.Item
+          className="format-acceptance"
           label="Image Upload"
           name="Image Upload"
           rules={[{ required: true, message: "Please input your username!" }]}

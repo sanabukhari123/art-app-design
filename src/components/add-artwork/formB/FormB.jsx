@@ -107,7 +107,7 @@ const FormB = () => {
           </Col>
         </Row>
       </div>
-    <div className="inner-form">
+    <div className="inner-form padding-top30">
         <Form.Item
           label="Artwork Title "
           name="username"
