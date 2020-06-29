@@ -25,4 +25,111 @@
   border: 1px solid #C7CBD4;
   border-radius: 5px;
   background-color: #FFFFFF;
+  padding: 40px 50px;
 }
+.login-container .ant-row
+{
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+.align-left
+{
+text-align: left!important;
+}
+
+.login-container h1{
+    color: #FFFFFF;
+  font-family: "New York Large";
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #000000;
+  padding: 13px 10px;
+  margin-bottom: 20px;
+}
+
+.login-container h2
+{
+    color: #2B384C;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container h3
+{
+    color: #2B384C;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.login-container .ant-input-affix-wrapper
+{
+    padding: 15px 15px;
+}
+.login-container .login-form-button
+{
+width:100%;
+color: #FFFFFF;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 19px;
+  border-radius: 2px;
+  background-color: #225BCE !important;
+  padding: 25px 0px;
+  line-height: 0px;
+}
+.login-container .forget
+{
+    margin:15px 0 20px 0;
+}
+.login-container input
+{
+    color: #C7CBD4;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+.login-container a{
+    color: #2480AA;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.login-container .ant-input-placeholder,
+.login-container .ant-input::placeholder
+{
+    color: #C7CBD4;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+    padding-left: 10px;
+}
+
+.login-container .ant-input-affix-wrapper
+{
+    width: 323px;
+  border: 1px solid #C7CBD4;
+  border-radius: 2px 2px 0 0;
+}
+.no-border-bottom .ant-input-affix-wrapper
+{
+    border-bottom: none;
+}
+

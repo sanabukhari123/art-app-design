@@ -10,6 +10,7 @@ import "./App.css";
 import Collection from "./components/collection/Collection";
 import SideBar from "./components/sidebar/SideBar";
 import AddArtwork from "./components/add-artwork/AddArtwork";
+import Login from "./components/login/Login";
 
 const menu = (
   <Menu>
@@ -48,6 +49,9 @@ const App = () => {
   };
 
   return (
+
+//<Login></Login>
+
     <Layout>
       <SideBar collapsed={collapsed} onCollapseChange={onCollapseChange} />
       <Layout className="site-layout">

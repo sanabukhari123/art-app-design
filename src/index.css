@@ -144,3 +144,7 @@ code {
   line-height: 22px !important;
   font-weight: normal !important;
 }
+.align-left
+{
+text-align: left;
+}

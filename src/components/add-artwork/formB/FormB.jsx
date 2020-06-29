@@ -125,10 +125,10 @@ const FormB = () => {
             <Option value="china">China</Option>
             <Option value="usa">U.S.A</Option>
           </Select>
-          <span className="border-group"></span>
+         
         </Form.Item>
 
-  
+        <span className="border-group"></span>
 
         <Form.Item className="width349"
           label="Include Transaction"

@@ -16,7 +16,8 @@
   font-size: 24px;
   letter-spacing: 0;
   line-height: 29px;
-   padding:20px;
+   padding:18px 20px;
+   text-align: center;
 }
 .sideBarMain .ant-menu-item span
 {
