@@ -128,22 +128,6 @@ code {
   border-color: #315497 !important;
 } */
 
-.dimension-class .ant-form-item-label label {
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 17px;
-  text-align: right;
-}
-
-.dimension-class .ant-input-group .ant-form-item-required {
-  color: rgba(0, 0, 0, 0.65) !important;
-  font-size: 14px !important;
-  letter-spacing: 0 !important;
-  line-height: 22px !important;
-  font-weight: normal !important;
-}
 .align-left
 {
 text-align: left;
