@@ -101,6 +101,7 @@ const FormA = () => {
       <div className="formA-inner">
         <div className="inner-form">
           <Form.Item
+            colon={false}
             className="small-width"
             label="Artwork Title"
             name="artworkTitle"
@@ -109,19 +110,24 @@ const FormA = () => {
             <Input placeholder="The Battle of San Romano" />
           </Form.Item>
           <Form.Item
+            colon={false}
             className="small-width"
             name="artist"
             label="Artist"
-            rules={[{ required: true, message: "Please select Artist" }]}
+            rules={[{ required: true, message: "Please select Artist"
+           }]}
           >
             <Select placeholder="Select Category">
               <Option value="china">China</Option>
               <Option value="usa">U.S.A</Option>
             </Select>
           </Form.Item>
-          <Form.Item className="id-name small-width" label="ID*">
+          <Form.Item 
+            colon={false}
+            className="id-name small-width" label="ID*">
             <Input.Group>
               <Form.Item
+                colon={false}
                 name={["authoAssignId", "autoAssigned"]}
                 noStyle
                 valuePropName="checked"
@@ -130,6 +136,7 @@ const FormA = () => {
               </Form.Item>
               <br />
               <Form.Item
+                colon={false}
                 name={["authoAssignId", "autoAssignedDetails"]}
                 noStyle
                 rules={[
@@ -144,6 +151,7 @@ const FormA = () => {
             </Input.Group>
           </Form.Item>
           <Form.Item
+            colon={false}
             className="small-width"
             name="category"
             label="Category"
@@ -155,6 +163,7 @@ const FormA = () => {
             </Select>
           </Form.Item>
           <Form.Item
+            colon={false}
             className="small-width"
             name="medium"
             label="Medium"
@@ -166,6 +175,7 @@ const FormA = () => {
             </Select>
           </Form.Item>
           <Form.Item
+            colon={false}
             className="small-width tag-select"
             label="Tags"
             name="tags"
@@ -181,7 +191,8 @@ const FormA = () => {
     {children}
   </Select>
           </Form.Item>
-          <Form.Item name="dateType">
+          <Form.Item
+          name="dateType">
             <Input.Group>
               <div className="button-tab">
                 <Radio.Group
@@ -241,6 +252,7 @@ const FormA = () => {
             </Input.Group>
           </Form.Item>
           <Form.Item
+            colon={false}
             className="dimension-class"
             label="Dimensions"
             name="dimensions"
@@ -254,6 +266,7 @@ const FormA = () => {
                 <InputNumber />
               </Form.Item>
               <Form.Item
+                colon={false}
                 label="Width (cm):"
                 name={["dimensions", "width"]}
                 rules={[{ required: true }]}
@@ -261,6 +274,7 @@ const FormA = () => {
                 <InputNumber />
               </Form.Item>
               <Form.Item
+                colon={false}
                 label="Depth (cm):"
                 name={["dimensions", "depth"]}
                 rules={[{ required: true }]}
@@ -271,6 +285,7 @@ const FormA = () => {
           </Form.Item>
         </div>
         <Form.Item
+          colon={false}
           className="small-width"
           label="Annotation to Dimensions"
           name="Annotation to Dimensions 
@@ -281,6 +296,7 @@ const FormA = () => {
           <Input />
         </Form.Item>
         <Form.Item
+          colon={false}
           className="textarea"
           label="Description 
 
@@ -293,6 +309,7 @@ const FormA = () => {
           <Input.TextArea />
         </Form.Item>
         <Form.Item
+          colon={false}
           className="textarea"
           label="Inscription 
 
@@ -305,6 +322,7 @@ const FormA = () => {
           <Input.TextArea />
         </Form.Item>
         <Form.Item
+          colon={false}
           className="textarea"
           label="Edition  
 
@@ -317,6 +335,7 @@ const FormA = () => {
           <Input.TextArea />
         </Form.Item>
         <Form.Item
+          colon={false}
           className="textarea"
           label="Provenance 
             "
@@ -328,6 +347,7 @@ const FormA = () => {
           <Input.TextArea />
         </Form.Item>
         <Form.Item
+          colon={false}
           className="textarea"
           label="Framing Details 
 
@@ -343,6 +363,7 @@ const FormA = () => {
           <Input.TextArea />
         </Form.Item>
         <Form.Item
+          colon={false}
           className="textarea"
           label="Packing Details 
 
@@ -358,6 +379,7 @@ const FormA = () => {
           <Input.TextArea />
         </Form.Item>
         <Form.Item
+          colon={false}
           className="small-width"
           label="Packing Crate Ref
  
@@ -384,6 +406,7 @@ const FormA = () => {
           </Select>
         </Form.Item>
         <Form.Item
+          colon={false}
           className="format-acceptance"
           label="Image Upload"
           name="Image Upload"

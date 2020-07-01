@@ -23,7 +23,7 @@
   border-radius: 4px;
 }
 .grey-row .blue-btn {
-  border: none;
+  border: none!important;
   background-color: #ffffff;
   border-radius: 6px;
   background-color: #315497;
@@ -159,8 +159,8 @@
   text-align: center;
 }
 
-.artwork1-form .inner-form .ant-form-item-control {
-  margin-left: 15px;
+.artwork1-form .ant-form-item-control {
+  margin-left: 10px;
 }
 
 .artwork1-form #basic_Description {
@@ -338,6 +338,12 @@ width: 100%;
 {
 padding-top: 20px;
 }
-
-
+.ant-layout ,.ant-form
+{
+background: #fff;
+}
+.no-left
+{
+margin-left: 0;
+}
 /* ///////////////////////// FORMB end////////////////// */

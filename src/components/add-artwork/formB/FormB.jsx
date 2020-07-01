@@ -109,6 +109,7 @@ const FormB = () => {
       </div>
     <div className="inner-form padding-top30">
         <Form.Item
+          colon={false}
           label="Artwork Title "
           name="username"
           rules={[{ required: true, message: "Please input your username!" }]}
@@ -116,6 +117,7 @@ const FormB = () => {
           <span className="span-value">Battle of San Romano</span>
         </Form.Item>
         <Form.Item className="width349"
+         colon={false}
           name="Group"
           label="Group "
           hasFeedback
@@ -131,6 +133,7 @@ const FormB = () => {
         <span className="border-group"></span>
 
         <Form.Item className="width349"
+         colon={false}
           label="Include Transaction"
           name="Include Transaction"
           rules={[{ required: true, message: "Please input your username!" }]}
@@ -139,6 +142,7 @@ const FormB = () => {
           <span className="span-value padding-left10">Included</span>
         </Form.Item>
         <Form.Item className="width349"
+         colon={false}
           name="Transaction Type* "
           label="Transaction Type*"
           hasFeedback
@@ -153,6 +157,7 @@ const FormB = () => {
           </Select>
         </Form.Item>
         <Form.Item className="width349"
+          colon={false}
           name="Seller* "
           label="Seller* "
           hasFeedback
@@ -166,7 +171,9 @@ const FormB = () => {
             <Option value="usa">U.S.A</Option>
           </Select>
         </Form.Item>
-        <Form.Item className="width349"
+        <Form.Item 
+         colon={false}
+        className="width349"
           name="Buyer
 
 
@@ -185,6 +192,7 @@ const FormB = () => {
           </Select>
         </Form.Item>
         <Form.Item className="width349"
+          colon={false}
           label="Transaction Date "
           name="Transaction Date"
           rules={[{ required: true, message: "Please input your username!" }]}
@@ -192,6 +200,7 @@ const FormB = () => {
           <DatePicker onpickerChange={onpickerChange} />
         </Form.Item>
         <Form.Item
+          colon={false}
           label="Invoice Date"
           name="Invoice Date"
           rules={[{ required: true, message: "Please input your username!" }]}
@@ -199,6 +208,7 @@ const FormB = () => {
           <DatePicker onpickerChange={onpickerChange} />
         </Form.Item>
         <Form.Item
+         colon={false}
           className="gbp"
           name="Amount "
           label="Amount "
@@ -217,6 +227,7 @@ const FormB = () => {
           </div>
         </Form.Item>
         <Form.Item
+         colon={false}
           label="Tax Amount"
           name="Tax Amount"
           rules={[{ required: true, message: "Please input your username!" }]}
@@ -224,6 +235,7 @@ const FormB = () => {
           <Input className="width224" />
         </Form.Item>
         <Form.Item className="width349"
+          colon={false}
           name="Broker "
           label="Broker"
           hasFeedback
@@ -238,6 +250,7 @@ const FormB = () => {
           </Select>
         </Form.Item>
         <Form.Item
+        colon={false}
         className="gbp"
         name="Commission Amount"
         label="Commission Amount "
@@ -255,6 +268,7 @@ const FormB = () => {
         </div>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Additional Costs Amount"
         name="Additional Costs Amount"
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -262,6 +276,7 @@ const FormB = () => {
         <Input className="width224" />
       </Form.Item>
         <Form.Item
+        colon={false}
         className="gbp"
         name="Discount"
         label="Discount "
@@ -280,6 +295,7 @@ const FormB = () => {
         </div>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Total "
         name="Total "
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -287,6 +303,7 @@ const FormB = () => {
         <span className="span-value">GBP 0.00</span>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Additional Costs Amount"
         name="Additional Costs Amount"
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -294,6 +311,7 @@ const FormB = () => {
         <Input className="width224" />
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Amount USD"
         name="Amount USD"
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -301,6 +319,7 @@ const FormB = () => {
         <span className="span-value">0.00</span>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Tax Amount USD "
         name="Tax Amount USD"
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -308,6 +327,7 @@ const FormB = () => {
         <span className="span-value">0.00</span>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Commission Amount USD "
         name="Commission Amount USD "
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -315,6 +335,7 @@ const FormB = () => {
         <span className="span-value">0.00</span>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Additional Costs Amount USD"
         name="Additional Costs Amount USD"
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -322,6 +343,7 @@ const FormB = () => {
         <span className="span-value">0.00</span>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Discount USD"
         name="Discount USD"
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -329,6 +351,7 @@ const FormB = () => {
         <span className="span-value">0.00</span>
       </Form.Item>
         <Form.Item className="width536"
+        colon={false}
         label="Notes"
         name="Notes"
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -336,6 +359,7 @@ const FormB = () => {
         <Input.TextArea />
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Attachments"
         name="Attachments "
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -346,9 +370,10 @@ const FormB = () => {
             Upload
           </Button>
         </Upload>
-        <span className="border-group"></span>
+        <span className="border-group no-left"></span>
       </Form.Item>
         <Form.Item
+        colon={false}
         label="Payment Instalments "
         name="Payment Instalments  "
         rules={[{ required: true, message: "Please input your username!" }]}
@@ -357,6 +382,7 @@ const FormB = () => {
         <span className="span-value padding-left10">Included</span>
       </Form.Item>
         <Form.Item className="width349"
+        colon={false}
         name="Artwork  "
         label="Artwork "
         hasFeedback
